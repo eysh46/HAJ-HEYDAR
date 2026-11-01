@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="fa"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=Vazirmatn:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>
+  @layer base {
+    html, body {
+      width: 100vw;
+      margin: 0;
+      padding: 0;
+      background-color: #0d0e12;
+      color: #e3e2e7;
+      font-family: 'Vazirmatn', 'Space Grotesk', sans-serif;
+    }
+    body {
+      overscroll-behavior: none;
+    }
+    .pb-safe {
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    .pt-safe {
+      padding-top: env(safe-area-inset-top, 0px);
+    }
+    main > :first-child {
+      margin-top: 0 !important;
+    }
+    main > :last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  .font-cuneiform-flair {
+    font-family: 'Cinzel', 'Space Grotesk', serif;
+    letter-spacing: 0.08em;
+  }
+  .basalt-panel {
+    background: radial-gradient(130% 100% at 50% 0%, #1c1f29 0%, #12141c 65%, #0c0d12 100%);
+    box-shadow: inset 0 1px 0 rgba(255, 215, 115, 0.12), 0 4px 20px rgba(0, 0, 0, 0.5);
+  }
+  .gold-gradient-text {
+    background: linear-gradient(135deg, #ffe599 0%, #f2bf51 50%, #b88619 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .gold-border {
+    border-color: rgba(230, 180, 71, 0.28);
+  }
+  .gold-glow {
+    box-shadow: 0 0 25px rgba(242, 191, 81, 0.25);
+  }
+</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-tertiary-fixed": "#00201c",
+          "on-secondary-fixed-variant": "#28467b",
+          "background": "#0d0e12",
+          "on-error-container": "#ffdad6",
+          "inverse-surface": "#e3e2e7",
+          "primary": "#ffd173",
+          "surface-container-lowest": "#08090c",
+          "surface-container-high": "#232632",
+          "secondary": "#acc7ff",
+          "primary-container": "#e6b447",
+          "outline": "#9b8f7c",
+          "outline-variant": "#4f4636",
+          "surface-container-low": "#151720",
+          "primary-fixed-dim": "#f2bf51",
+          "surface-tint": "#f2bf51",
+          "on-secondary-container": "#99b5f1",
+          "surface-container": "#1a1d26",
+          "on-tertiary-fixed-variant": "#005048",
+          "on-primary-fixed": "#261900",
+          "tertiary-container": "#41d0bd",
+          "on-tertiary": "#003731",
+          "on-secondary": "#0a2f63",
+          "on-surface": "#e3e2e7",
+          "secondary-fixed-dim": "#acc7ff",
+          "surface-variant": "#2a2d39",
+          "on-surface-variant": "#d2c5b0",
+          "on-primary-fixed-variant": "#5c4200",
+          "error": "#ffb4ab",
+          "error-container": "#93000a",
+          "inverse-on-surface": "#2f3035",
+          "inverse-primary": "#7a5900",
+          "secondary-container": "#1e3a5f",
+          "on-primary-container": "#624700",
+          "surface": "#0d0e12",
+          "primary-fixed": "#ffdea2",
+          "on-error": "#690005",
+          "on-tertiary-container": "#00554c",
+          "on-secondary-fixed": "#001a41",
+          "surface-bright": "#38393d",
+          "secondary-fixed": "#d8e2ff",
+          "surface-dim": "#0d0e12",
+          "on-background": "#e3e2e7",
+          "tertiary-fixed": "#71f8e4",
+          "tertiary-fixed-dim": "#4fdbc8",
+          "tertiary": "#64edd9",
+          "surface-container-highest": "#343745",
+          "on-primary": "#402d00"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.35rem",
+          "xl": "0.6rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-xl": "2.5rem",
+          "space-md": "1rem",
+          "space-lg": "1.5rem",
+          "space-sm": "0.5rem",
+          "margin": "2rem",
+          "margin-mobile": "1rem",
+          "space-xs": "0.25rem",
+          "gutter-mobile": "1rem",
+          "gutter": "1.5rem"
+        },
+        "fontFamily": {
+          "label-md": ["Space Grotesk", "Vazirmatn"],
+          "body-lg": ["Space Grotesk", "Vazirmatn"],
+          "title": ["Space Grotesk", "Vazirmatn"],
+          "label-sm": ["Space Grotesk", "Vazirmatn"],
+          "body-md": ["Space Grotesk", "Vazirmatn"],
+          "headline-md": ["Space Grotesk", "Vazirmatn"],
+          "display": ["Space Grotesk", "Vazirmatn"],
+          "headline-lg": ["Space Grotesk", "Vazirmatn"],
+          "headline-sm": ["Space Grotesk", "Vazirmatn"],
+          "label-lg": ["Space Grotesk", "Vazirmatn"]
+        }
+      }
+    }
+  };
+</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface flex flex-col min-h-screen selection:bg-primary-container selection:text-surface-container-lowest"><header class="fixed top-0 inset-x-0 z-50 bg-[#0d0e12]/92 backdrop-blur-xl border-b border-[#ffd173]/20 shadow-[0_4px_20px_rgba(0,0,0,0.7)] pt-safe"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><!-- Imperial Emblem / Winged Faravahar Sun Accent --><div class="relative flex items-center justify-center"><div class="w-10 h-10 rounded-full basalt-panel border border-[#ffd173]/50 flex items-center justify-center shadow-[0_0_15px_rgba(242,191,81,0.25)]"><svg class="w-6 h-6 text-primary fill-current" viewbox="0 0 24 24"><path d="M12 2L13.7 5.8L17.8 4.6L16.6 8.7L20.4 10.4L17.5 13.3L19.9 16.7L15.9 17L15.5 21.1L12 18.9L8.5 21.1L8.1 17L4.1 16.7L6.5 13.3L3.6 10.4L7.4 8.7L6.2 4.6L10.3 5.8L12 2Z" fill="url(#goldGrad)"></path><circle cx="12" cy="12" fill="#14161f" r="4.2" stroke="#f2bf51" stroke-width="1.2"></circle><circle cx="12" cy="12" fill="#f2bf51" r="2"></circle><defs><lineargradient id="goldGrad" x1="0%" x2="100%" y1="0%" y2="100%"><stop offset="0%" stop-color="#ffd173"></stop><stop offset="100%" stop-color="#b88619"></stop></lineargradient></defs></svg></div><span class="absolute -bottom-1 -right-1 w-2.5 h-2.5 rounded-full bg-tertiary-container border border-surface shadow-[0_0_6px_#41d0bd]"></span></div><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-cuneiform-flair text-lg font-black tracking-wider gold-gradient-text drop-shadow-[0_1px_8px_rgba(230,180,71,0.4)]">HAJ_HEYDAR</span><span class="text-[10px] text-primary/80 border border-primary/30 px-1 py-0.2 rounded font-mono">PARSA</span></div><span class="font-label-sm text-[10px] text-on-surface-variant font-medium tracking-widest">شاهنشاهی هخامنشی • TUNNEL v4.9</span></div></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-space-xs px-2.5 py-1 rounded-full basalt-panel border border-[#ffd173]/30 shadow-[0_0_10px_rgba(230,180,71,0.15)]"><span class="w-2 h-2 rounded-full bg-primary-fixed-dim animate-pulse shadow-[0_0_8px_#ffd173]"></span><span class="font-label-sm text-[11px] text-primary font-mono" dir="ltr">0.0 KB/s</span></div><div class="w-9 h-9 rounded-lg basalt-panel border border-[#ffd173]/40 flex items-center justify-center shadow-[0_0_14px_rgba(230,180,71,0.2)]"><span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">shield_person</span></div></div></div></header><main class="flex flex-col relative w-full px-gutter-mobile pt-20 pb-24 bg-surface min-h-screen overflow-x-hidden"><div class="flex flex-col w-full gap-space-lg">
+<!-- Status & Imperial Registry Banner -->
+<div class="flex flex-col bg-surface-container p-space-md rounded-xl shadow-xl relative overflow-hidden">
+<div class="absolute -right-10 -top-10 w-36 h-36 bg-primary-container/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">دروازه بارگیری شاهنشاهی</span>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container-high text-tertiary">نسخه پایدار ۴.۹.۲</span>
+</div>
+<div class="flex items-baseline justify-between">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold tracking-tight">دریافت سلاح‌های ارتباطی هخامنشی</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs leading-relaxed">
+      پروتکل‌های غیرقابل نفوذ پارسه مجهز به موتورهای شتاب‌یافته Xray، رمزنگاری تالار آپادانا و مسیریابی چندلایه.
+    </p>
+<!-- Network Pulse Indicator -->
+<div class="flex items-center justify-between mt-space-md p-space-xs px-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
+<span class="font-label-md text-label-md text-on-surface">سرورهای اختصاصی دانلود پارسه</span>
+</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-primary">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span dir="ltr">CDN 10 Gbps فعال</span>
+</div>
+</div>
+</div>
+<!-- Mobile Client Section (Android & iOS) -->
+<section class="flex flex-col bg-surface-container p-space-md rounded-xl shadow-xl relative">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary shadow-md">
+<span class="material-symbols-outlined text-[30px]" style="font-variation-settings: 'FILL' 1;">smartphone</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title text-title text-on-surface font-bold">نسخه موبایل (اندروید و آیفون)</span>
+<span class="font-label-md text-label-md text-on-surface-variant">HAJ_HEYDAR Mobile Suite • v4.9.2</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary-container/20 text-primary font-bold">بیشترین دانلود</span>
+</div>
+<!-- Visual Banner / Showcase Graphic -->
+<div class="w-full h-44 rounded-lg overflow-hidden my-space-md relative shadow-inner flex items-center justify-center bg-surface-container-lowest">
+<img class="object-cover w-full h-full opacity-85" data-alt="A luxurious dark basalt stone tablet carved with majestic Achaemenid Persian motifs and Persepolis lotus petals, displaying an ultra modern encrypted mobile cybersecurity interface with gleaming chased gold leaf accents and soft cyan telemetry lines in a dark mystical vault." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPpO5bQZIGX1FQRFdoJa4nM5kfA8AIxaYRjQoMIkHnJDrQZ71__SIJ4M1eVbxcII5kjPfgFKQOOdpjNav9wee5Ld9DUOKJb3KzopazQHzxUyQkRUbmDLVrO5SrydoyMqwEtJkx_rOsQ4DrWzKCEAjtGAiZIMq1jUBR2_06qFEXHU0eST403MirjDdEm1jfs-ELbOKGFRYdFBuP7rZIU9ge96QTI_zYCQE9tfXlT_Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/40 to-transparent"></div>
+<div class="absolute bottom-3 right-3 left-3 flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-1.5 bg-surface-container-highest/90 backdrop-blur-md px-2.5 py-1 rounded">
+<span class="material-symbols-outlined text-tertiary text-[18px]">verified_user</span>
+<span class="font-label-sm text-label-sm text-on-surface">هسته Xray Core 1.8.8</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-highest/90 backdrop-blur-md px-2.5 py-1 rounded">
+<span class="font-label-sm text-label-sm text-primary">حجم: ۲۴ مگابایت</span>
+</div>
+</div>
+</div>
+<!-- Main Download CTA (Direct APK) -->
+<a class="flex items-center justify-between w-full bg-primary-container hover:bg-primary transition-all p-space-md rounded-lg shadow-lg text-on-primary-container active:scale-[0.99]" href="#download-apk" id="apkDownloadBtn">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">download</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-title text-title font-bold text-on-primary-container">دانلود مستقیم فایل APK اندروید</span>
+<span class="font-label-sm text-label-sm opacity-85">لینک نیم‌بها • سرور پرسرعت بدون فیلتر شیراز</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[22px]">arrow_back</span>
+</a>
+<!-- Secondary Mobile Buttons Grid -->
+<div class="grid grid-cols-2 gap-space-sm mt-space-sm">
+<a class="flex items-center justify-center gap-space-xs p-space-sm bg-surface-container-high hover:bg-surface-container-highest text-on-surface rounded-lg transition-colors shadow-sm" href="#github-release">
+<span class="material-symbols-outlined text-[18px] text-primary">code</span>
+<span class="font-label-md text-label-md">نسخه GitHub</span>
+</a>
+<a class="flex items-center justify-center gap-space-xs p-space-sm bg-surface-container-high hover:bg-surface-container-highest text-on-surface rounded-lg transition-colors shadow-sm" href="#ios-pwa">
+<span class="material-symbols-outlined text-[18px] text-secondary">file_download</span>
+<span class="font-label-md text-label-md">وب‌اپلیکیشن iOS</span>
+</a>
+</div>
+<!-- QR Code Direct Scan Block -->
+<div class="mt-space-md p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex flex-col max-w-[65%]">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[16px]">qr_code_scanner</span>
+<span class="font-label-md text-label-md font-bold">اسکن کتیبه دانلود فوری</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">دوربین گوشی را مقابل تصویر بگیرید تا لینک بدون واسطه باز شود.</span>
+</div>
+<!-- Inline Stylized QR Code SVG Representation -->
+<div class="w-16 h-16 bg-surface-container-highest p-1.5 rounded-lg flex items-center justify-center shadow-md">
+<svg class="w-full h-full text-primary" fill="currentColor" viewbox="0 0 40 40">
+<path d="M4 4h12v12H4V4zm4 4v4h4V8H8zM24 4h12v12H24V4zm4 4v4h4V8h-4zM4 24h12v12H4V24zm4 4v4h4v-4H8zM20 4h4v4h-4V4zm0 8h4v4h-4v-4zm-8 8h4v4h-4v-4zm4 4h4v4h-4v-4zm8-4h4v4h-4v-4zm4 4h4v4h-4v-4zm4-4h4v4h-4v-4zm0 8h4v4h-4v-4zm-8 4h4v4h-4v-4zm4 4h4v4h-4v-4z"></path>
+</svg>
+</div>
+</div>
+<!-- Mobile Version Changelog Accordion -->
+<div class="mt-space-md bg-surface-container-lowest p-space-sm rounded-lg flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface">
+<span class="font-label-md text-label-md font-bold text-primary">تغییرات کتیبه v4.9.2:</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">2025.02 STABLE</span>
+</div>
+<ul class="flex flex-col gap-1 mt-1 text-on-surface-variant font-label-sm text-label-sm">
+<li class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>پشتیبانی کامل از پروتکل‌های Reality، VLESS-gRPC و Fragment</span>
+</li>
+<li class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>افزایش سرعت هندشیک تا ۷۵٪ با سیستم Anti-Drop پارسه</span>
+</li>
+<li class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>پشتیبانی از تانل معکوس برای سیم‌کارت‌های همراه اول، ایرانسل و رایتل</span>
+</li>
+</ul>
+</div>
+</section>
+<!-- Desktop Windows Client Section -->
+<section class="flex flex-col bg-surface-container p-space-md rounded-xl shadow-xl relative">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-secondary shadow-md">
+<span class="material-symbols-outlined text-[30px]" style="font-variation-settings: 'FILL' 1;">desktop_windows</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title text-title text-on-surface font-bold">کلاینت دسکتاپ ویندوز</span>
+<span class="font-label-md text-label-md text-on-surface-variant">HAJ_HEYDAR PC Suite (64-bit)</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-bold">مخصوص کامپیوتر</span>
+</div>
+<!-- Windows Hero Visual -->
+<div class="w-full h-40 rounded-lg overflow-hidden my-space-md relative shadow-inner flex items-center justify-center bg-surface-container-lowest">
+<img class="object-cover w-full h-full opacity-80" data-alt="Monolithic ancient Persian cybernetic control room showing multiple command terminal screens carved inside a stone Apadana palace wall, displaying high performance network routing telemetry graphs and glowing golden Persian winged insignias." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGOtr7kdn9v8agL5uxLU12FdrB58auUnOnljbu-zIbLtBOdevgKkveaUUSkeSFm8mtf0J5bXdEHntC858QCWcAiwe3oKfmz1rTv2JYDqyNjD2wMl_1lPyBJ0grakugl-DtcnnPGhdvpjx7DzC-_Ow4WleIbZbgl2B3DMnJNj8SyYAmOrAov7EO07B0gtYpwVhxQy_mjPW6CZIVRjf4s3yGsnxSce_yrMX4U3kfeZk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent"></div>
+<div class="absolute bottom-3 right-3 left-3 flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-1.5 bg-surface-container-highest/90 backdrop-blur-md px-2.5 py-1 rounded">
+<span class="material-symbols-outlined text-primary text-[18px]">security</span>
+<span class="font-label-sm text-label-sm text-on-surface">درایور Wintun TUN L3 آماده</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-highest/90 backdrop-blur-md px-2.5 py-1 rounded">
+<span class="font-label-sm text-label-sm text-secondary">ویندوز ۱۰ و ۱۱</span>
+</div>
+</div>
+</div>
+<!-- Setup.exe Download Button -->
+<a class="flex items-center justify-between w-full bg-secondary-container hover:bg-secondary-container/90 transition-all p-space-md rounded-lg shadow-lg text-on-secondary-container active:scale-[0.99]" href="#download-windows-exe">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest/40 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-title text-title font-bold text-on-secondary-container">دانلود فایل نصبی ویندوز (Setup.exe)</span>
+<span class="font-label-sm text-label-sm text-on-secondary-container/80">حجم: ۳۸ مگابایت • نسخه ۶۴ بیتی یکپارچه</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[22px]">download_for_offline</span>
+</a>
+<!-- Portable Edition Download Link -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-high rounded-lg mt-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">folder_zip</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">نسخه پرتابل (بدون نیاز به نصب)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">فایل فشرده Portable.zip • حجم ۳۲ مگابایت</span>
+</div>
+</div>
+<a class="px-3 py-1.5 rounded-lg bg-surface-container-highest text-primary hover:bg-primary hover:text-on-primary transition-colors font-label-md text-label-md font-bold" href="#download-portable">
+        دریافت ZIP
+      </a>
+</div>
+<!-- Fast Installation Guide Panel -->
+<div class="mt-space-md p-space-sm bg-surface-container-low rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[18px]">info</span>
+<span class="font-label-md text-label-md font-bold">راهنمای راه‌اندازی سریع درایور سیستمی</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        جهت فعال‌سازی حالت لایه سوم (Global TUN)، نرم‌افزار را با دسترسی ادمین (<span class="font-mono text-primary">Run as Administrator</span>) اجرا کنید تا هسته باستانی هایپرلودر فعال شود.
+      </p>
+</div>
+</section>
+<!-- Server Mirror Health & Infrastructure Card -->
+<section class="flex flex-col bg-surface-container p-space-md rounded-xl shadow-xl gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">hub</span>
+<span class="font-title text-title text-on-surface font-bold">وضعیت سلامت آینه‌های بارگیری</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary">۱۰۰٪ پایدار</span>
+</div>
+<!-- Mirror Grid -->
+<div class="grid grid-cols-1 gap-space-xs mt-space-xs">
+<!-- Mirror 1 -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary shadow-sm"></span>
+<span class="font-label-md text-label-md text-on-surface font-medium">سرور سلطنتی تخت جمشید (اختصاصی ملی)</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">12 ms • CDN Iran</span>
+</div>
+<!-- Mirror 2 -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary shadow-sm"></span>
+<span class="font-label-md text-label-md text-on-surface font-medium">کلود کاتیبان پارسه (فرانکفورت آلمان)</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">48 ms • Cloudflare</span>
+</div>
+<!-- Mirror 3 -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary shadow-sm"></span>
+<span class="font-label-md text-label-md text-on-surface font-medium">مخزن بین‌المللی گیت‌هاب (Github Release)</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Ready • Global</span>
+</div>
+</div>
+<!-- Security Check Stamp -->
+<div class="flex items-center justify-center gap-space-xs mt-space-xs py-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+<span class="font-label-sm text-label-sm">تمامی فایل‌ها بررسی شده و عاری از هرگونه بدافزار هستند (SHA-256 Validated)</span>
+</div>
+</section>
+<!-- Interactive Feedback Modal Notification (Hidden by default, triggered on click) -->
+<div class="fixed bottom-20 inset-x-4 z-50 bg-primary-container text-on-primary-container p-space-md rounded-xl shadow-2xl flex items-center justify-between transition-transform duration-300 transform translate-y-36 opacity-0 pointer-events-none" id="downloadAlert">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[24px]">task_alt</span>
+<div class="flex flex-col text-right">
+<span class="font-title text-title font-bold">فرمان دریافت صادر شد!</span>
+<span class="font-label-sm text-label-sm">بارگیری بسته شاهنشاهی پارسه شروع گردید.</span>
+</div>
+</div>
+<button class="p-1 rounded-full bg-surface-container-lowest/20" id="closeAlertBtn">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<script>
+  (function() {
+    const downloadBtn = document.getElementById('apkDownloadBtn');
+    const alertBox = document.getElementById('downloadAlert');
+    const closeBtn = document.getElementById('closeAlertBtn');
+
+    if (downloadBtn && alertBox) {
+      downloadBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        alertBox.classList.remove('translate-y-36', 'opacity-0', 'pointer-events-none');
+        alertBox.classList.add('translate-y-0', 'opacity-100');
+        
+        setTimeout(() => {
+          alertBox.classList.remove('translate-y-0', 'opacity-100');
+          alertBox.classList.add('translate-y-36', 'opacity-0', 'pointer-events-none');
+        }, 4000);
+      });
+    }
+
+    if (closeBtn && alertBox) {
+      closeBtn.addEventListener('click', function() {
+        alertBox.classList.remove('translate-y-0', 'opacity-100');
+        alertBox.classList.add('translate-y-36', 'opacity-0', 'pointer-events-none');
+      });
+    }
+  })();
+</script></main><!-- Luxurious Imperial Basalt Bottom Navigation Bar with Antique Gold Accents --><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-[#0d0e12]/96 border-t border-[#ffd173]/25 backdrop-blur-xl shadow-[0_-4px_25px_rgba(0,0,0,0.8)]"><div class="grid grid-cols-4 items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center gap-1 w-full h-full text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">power_settings_new</span><span class="font-label-sm text-[11px] font-bold">اتصال</span></a><a class="flex flex-col items-center justify-center gap-1 w-full h-full text-on-surface-variant hover:text-primary transition-colors" data-path="servers" href="#"><span class="material-symbols-outlined text-[22px]">dns</span><span class="font-label-sm text-[11px]">سرورها</span></a><a class="flex flex-col items-center justify-center gap-1 w-full h-full text-on-surface-variant hover:text-primary transition-colors" data-path="windows-and-tools" href="#"><span class="material-symbols-outlined text-[22px]">home_repair_service</span><span class="font-label-sm text-[11px]">ابزارها</span></a><a class="flex flex-col items-center justify-center gap-1 w-full h-full text-on-surface-variant hover:text-primary transition-colors" data-path="admin-creator" href="#"><span class="material-symbols-outlined text-[22px]">shield_person</span><span class="font-label-sm text-[11px]">فرماندهی</span></a></div></nav></body></html>
